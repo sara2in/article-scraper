@@ -14,7 +14,7 @@ var db = require("./models");
 
 var PORT = 3000;
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword>@ds129811.mlab.com:29811/heroku_dqr46ft5";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://<heroku_dqr46ft5>:<dbpassword>@ds129811.mlab.com:29811/heroku_dqr46ft5";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 // Initialize Express
