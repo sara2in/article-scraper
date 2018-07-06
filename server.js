@@ -14,7 +14,7 @@ var db = require("./models");
 
 var PORT = 3000;
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://<heroku_dqr46ft5>:<dbpassword>@ds129811.mlab.com:29811/heroku_dqr46ft5";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://<heroku_dqr46ft5>:<bootcamp05>@ds129811.mlab.com:29811/heroku_dqr46ft5";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 // Initialize Express
@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/week18Populater");
+mongoose.connect("mongodb://localhost/week18Populater");
 
 // Routes
 var exphbs = require("express-handlebars");
