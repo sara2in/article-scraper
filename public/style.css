@@ -12,6 +12,7 @@ body { background-color: #F2F6D0 }
 }
 .btn {
   float: right;
+  margin: 5px;
 }
 #wrapper {
   width: 960px;
@@ -24,10 +25,6 @@ body { background-color: #F2F6D0 }
   overflow: auto;
   width: 60%;
   height: 700px;
-}
-#notes {
-  float: right;
-  width: 30%;
 }
 textarea, input {
   display: block;

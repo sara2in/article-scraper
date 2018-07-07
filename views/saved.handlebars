@@ -1,15 +1,8 @@
 <div class="container">
-    <div class="row">
-        <img style="width:250px; height:250px;" src="images/Dancing-Astronaut.jpg">
-        <p style="font-size:4em">SAVED ARTICLES</p>
-        <br>
-        <h3>
-            <a href="/" style="float:right;" id="saved-articles" class='btn btn-successs'>Home</a>
-            <a style="float:right;" id="scrape-articles" class='btn btn-successs'>Scrape Articles</a>
-            <a style="float:right;" id="clear" class='btn btn-successs'>Clear All Articles</a>
-        </h3>
-    </div>
-        <div class="saved-articles"></div>
+    <nav class="navbar transparent">
+        {{> nav }}
+    </nav>
+
+    <div class="saved-articles"></div>
     <div id="notes"></div>
 </div>
-

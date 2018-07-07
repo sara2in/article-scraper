@@ -13,6 +13,7 @@ var cheerio = require("cheerio");
 var db = require("./models");
 
 var PORT = process.env.PORT || 3000;
+// var PORT = 3000;
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://<heroku_dqr46ft5>:<bootcamp05>@ds129811.mlab.com:29811/heroku_dqr46ft5";
 mongoose.Promise = Promise;
@@ -109,7 +110,7 @@ app.post("/articles", function (req, res) {
       // If we were able to successfully find Articles, send them back to the client
       // res.json(dbArticle);
 
-   return db.Article.drop();
+  //  return db.Article.drop();
     })
     .catch(function (err) {
       // If an error occurred, send it to the client
@@ -154,7 +155,7 @@ app.post("/articles/:id", function (req, res) {
       // If a Note was created successfully, find one Article with an `_id` equal to `req.params.id`. Update the Article to be associated with the new Note
       // { new: true } tells the query that we want it to return the updated User -- it returns the original by default
       // Since our mongoose query returns a promise, we can chain another `.then` which receives the result of the query
-      return  db.Article.findOneAndUpdate({ "_id": req.params.id }, { "saved": true});
+      return  db.Article.findOneAndUpdate({ "_id": req.params.id }, { "saved": true}, { _id: req.params.id }, { note: dbNote._id }, { new: true });
       // db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbNote._id }, { new: true });
     })
     .then(function (dbArticle) {
@@ -173,7 +174,7 @@ app.post("/saved/:id", function (req, res) {
       // If a Note was created successfully, find one Article with an `_id` equal to `req.params.id`. Update the Article to be associated with the new Note
       // { new: true } tells the query that we want it to return the updated User -- it returns the original by default
       // Since our mongoose query returns a promise, we can chain another `.then` which receives the result of the query
-      return  db.Article.findOneAndUpdate({ "_id": req.params.id }, { "saved": false});
+      // return  db.Article.findOneAndUpdate({ "_id": req.params.id }, { "saved": false});
       // db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbNote._id }, { new: true });
     })
     .then(function (dbArticle) {
