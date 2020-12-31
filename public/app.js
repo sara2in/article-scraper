@@ -25,7 +25,7 @@ $("#scrape-articles").on("click", function (event) {
   })
   .then(function (data) {
     console.log(data);   
-    location.reload();
+    window.location = "/";
   });
 });
 
@@ -40,7 +40,7 @@ $("#clear").on("click", function (event) {
     .then(function (data) {
       console.log('Success')
       console.log(data);
-      location.reload();
+      window.location = "/";
     });
 });
 
