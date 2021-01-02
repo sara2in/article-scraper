@@ -111,6 +111,5 @@ $(document).on("click", "#savenote", function () {
     .then(function (data) {
       console.log(data);
     });
-  $("#titleinput").val("");
-  $("#bodyinput").val("");
+    $('#exampleModal').modal('toggle');
 });

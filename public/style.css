@@ -44,3 +44,8 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: 992px) {
+  #header_text {margin-left: 15px;}
+}
+
